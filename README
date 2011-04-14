@@ -6,4 +6,16 @@ Example usage:
 
 {ok, Cookie} = erlftclient:client_login(<email>, <password>).
 
+{ok, TableList} = erlftclient:show_tables(Cookie).
+
+{ok, ColList} = erlftclient:describe_table(Cookie, <table-id>).
+
+RawResults = erlftclient:ft_query(fun(X) -> X end, Cookie, "SELECT <something> FROM <table-id>").
+
+ResultsAsTupleList = erlftclient:ft_query(fun(X) -> X end, Cookie, "SELECT <something> FROM <table-id>", true).
+
+
+
+
+
 
