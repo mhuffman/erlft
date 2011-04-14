@@ -1,0 +1,9 @@
+Erlang client for Google Fusion Tables.
+
+Requires ssl compiled into erlang node.
+
+Example usage:
+
+{ok, Cookie} = erlftclient:client_login(<email>, <password>).
+
+
